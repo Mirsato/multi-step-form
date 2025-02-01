@@ -1,4 +1,3 @@
-
 # Multi Step Form - Level 2
 
 This project involves building a ticket-ordering frontend app with a multi-step form. Please read the instructions carefully to ensure smooth progress. Good luck!
