@@ -1,0 +1,66 @@
+.container {
+    @apply flex justify-center pt-4 content-center w-full max-w-full m-auto px-4; /* Center both horizontally and vertically */
+}
+
+.result {
+    @apply flex justify-center pt-2 content-center w-full max-w-full m-auto px-4;
+
+    .content-result {
+        @apply w-[20%] p-6 border rounded-md bg-lime-100 justify-center content-center items-center
+    }
+
+    .content-result h1 {
+        @apply font-bold text-xl mb-4 items-center justify-center flex;
+    }
+    
+    .data {
+        @apply flex gap-3 font-semibold w-full;
+    }
+
+    .data label {
+        @apply w-1/2
+    }
+
+    .data .value {
+        @apply font-bold w-1/2
+    }
+}
+    
+.last-step {
+    @apply w-[20%] p-6 border rounded-md bg-gray-200 justify-center content-center items-center;
+
+    .btn {
+        @apply flex gap-5 items-center w-full justify-center py-4;
+
+        .btn-submit {
+            @apply bg-blue-200 text-white hover:bg-blue-400 p-2 rounded-lg
+        }
+
+        .btn-cancel {
+            @apply bg-red-200 text-white hover:bg-red-400 p-2 rounded-lg
+        }
+    }
+
+}
+
+.last-step h1 {
+    @apply font-bold text-xl mb-4 items-center justify-center flex;
+}
+
+.last-step .form-content {
+    @apply flex items-center gap-2 py-5 w-full;
+}
+
+.last-step .form-content label {
+    @apply font-semibold text-sm w-1/4;
+}
+
+.last-step .form-content input {
+    @apply p-2 border border-gray-300 rounded-md w-3/4;
+}
+
+.last-step .form-content .error {
+    @apply font-light text-red-500;
+}
+
+  

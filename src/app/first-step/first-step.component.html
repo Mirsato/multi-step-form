@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="register">
+        <h1 data-testid="title">Step 1</h1>
+        <form [formGroup]="regisForm" (ngSubmit)="onSubmit()">
+            <div class="form-content">
+                <div class="item">
+                    <label for="">Firstname</label>
+                    <input data-testid="firstName" id="firstname" type="text" formControlName="firstname" (blur)="validation()">
+                </div>
+                <div *ngIf="errorName" class="form-content">
+                    <small class="error">{{errorName}}</small>
+                </div>
+            </div>
+            <div class="form-content">
+                <div class="item">
+                    <label for="">Lastname</label>
+                    <input data-testid="lastName" id="lastname" type="text" formControlName="lastname" (blur)="validation()">
+                </div>
+                <div *ngIf="errorLastName" class="form-content">
+                    <small class="error">{{errorLastName}}</small>
+                </div>
+            </div>
+            <div class="form-content">
+                <div class="item">
+                    <label for="">Age</label>
+                    <input data-testid="age" id="age" type="text" formControlName="age" (blur)="validation()">
+                </div>
+                <div *ngIf="errorAge" class="form-content">
+                    <small class="error">{{errorAge}}</small>
+                </div>
+            </div>
+            <div class="btn">
+                <button class="btn-cancel" (click)="clear()" type="button">Clear</button>
+                <button data-testid="submit" class="btn-submit" type="submit">Next</button>
+            </div>
+        </form>
+    </div>
+</div>
