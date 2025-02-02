@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="last-step">
+        <h1 data-testid="title">Step 3</h1>
+        <form [formGroup]="regisForm" (ngSubmit)="onSubmit()">
+            <div class="form-content">
+                <label for="">Seat</label>
+                <input data-testid="seat" id="seat" type="text" formControlName="seat" (blur)="validation()">
+            </div>
+            <div class="form-content">
+                <label for="">Food</label>
+                <input data-testid="food" id="food" type="text" formControlName="food" (blur)="validation()">
+            </div>
+            <div class="form-content">
+                <label for="">Allergies</label>
+                <input data-testid="allergies" id="allergies" type="text" formControlName="allergies" (blur)="validation()">
+            </div>
+            <div *ngIf="errorName" class="form-content">
+                <small class="error">{{errorName}}</small>
+            </div>
+            <div class="btn">
+                <button data-testid="back" class="btn-cancel" (click)="back()"  type="button">Back</button>
+                <button data-testid="submit" class="btn-submit" type="submit">Next</button>
+            </div>
+        </form>
+    </div>
+</div>

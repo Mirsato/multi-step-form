@@ -1,8 +1,32 @@
 .container {
     @apply flex justify-center pt-4 content-center w-full max-w-full m-auto px-4; /* Center both horizontally and vertically */
 }
+
+.result {
+    @apply flex justify-center pt-2 content-center w-full max-w-full m-auto px-4;
+
+    .content-result {
+        @apply w-[20%] p-6 border rounded-md bg-lime-100 justify-center content-center items-center
+    }
+
+    .content-result h1 {
+        @apply font-bold text-xl mb-4 items-center justify-center flex;
+    }
     
-.register {
+    .data {
+        @apply flex gap-3 font-semibold w-full;
+    }
+
+    .data label {
+        @apply w-1/2
+    }
+
+    .data .value {
+        @apply font-bold w-1/2
+    }
+}
+    
+.last-step {
     @apply w-[20%] p-6 border rounded-md bg-gray-200 justify-center content-center items-center;
 
     .btn {
@@ -19,23 +43,23 @@
 
 }
 
-.register h1 {
+.last-step h1 {
     @apply font-bold text-xl mb-4 items-center justify-center flex;
 }
 
-.register .form-content {
+.last-step .form-content {
     @apply flex items-center gap-2 py-5 w-full;
 }
 
-.register .form-content label {
+.last-step .form-content label {
     @apply font-semibold text-sm w-1/4;
 }
 
-.register .form-content input {
+.last-step .form-content input {
     @apply p-2 border border-gray-300 rounded-md w-3/4;
 }
 
-.register .form-content .error {
+.last-step .form-content .error {
     @apply font-light text-red-500;
 }
 

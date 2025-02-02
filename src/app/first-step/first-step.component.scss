@@ -24,7 +24,11 @@
 }
 
 .register .form-content {
-    @apply flex items-center gap-2 py-5 w-full;
+    @apply flex flex-col items-center w-full py-2;
+
+    .item {
+        @apply flex items-center w-full gap-2
+    }
 }
 
 .register .form-content label {

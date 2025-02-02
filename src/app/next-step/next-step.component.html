@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="next-step">
+        <h1 data-testid="title">Step 2</h1>
+        <form [formGroup]="regisForm" (ngSubmit)="onSubmit()">
+            <div class="form-content">
+                <div class="item">
+                    <label for="">Phone</label>
+                    <input data-testid="phone" id="phone" type="text" formControlName="phone" (blur)="validation()">
+                </div>
+                <div *ngIf="errorPhone">
+                    <small class="error">{{errorPhone}}</small>
+                </div>
+            </div>
+            <div class="form-content">
+                <div class="item">
+                    <label for="">Email</label>
+                    <input data-testid="email" id="email" type="text" formControlName="email" (blur)="validation()">
+                </div>
+                <div *ngIf="errorEmail" >
+                    <small class="error">{{errorEmail}}</small>
+                </div>
+            </div>
+            <div class="btn">
+                <button data-testid="back" class="btn-cancel" (click)="back()" type="button">Back</button>
+                <button data-testid="submit" class="btn-submit" type="submit">Next</button>
+            </div>
+        </form>
+    </div>
+</div>
+

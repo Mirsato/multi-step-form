@@ -1,7 +1,7 @@
 describe('Frontend Test Spec', () => {
-
+  //i only change the url visit to validate all the test, the rest of the content / attribute i leave it as it is
   it('It is possible to complete all steps with valid data', () => {
-    cy.visit('/')
+    cy.visit('http://localhost:4200/');
 
     // Complete step 1
     const firstName = "Bob"
@@ -41,7 +41,7 @@ describe('Frontend Test Spec', () => {
   })
 
   it('It is possible to nagivate back and all data is preserved', () => {
-    cy.visit('/')
+    cy.visit('http://localhost:4200/');
 
     // Complete step 1
     const firstName = "Bob"
@@ -98,7 +98,8 @@ describe('Frontend Test Spec', () => {
 	
   it('It is possible to identify invalid data', () => {
     // Check Step1 validation
-    cy.visit('/')
+    const url = 'http://localhost:4200';
+    cy.visit(url);
 
     // Verify required validation
     cy.get('[data-testid=submit]').click()
@@ -121,7 +122,7 @@ describe('Frontend Test Spec', () => {
     cy.get('form').should('contain.text', "Age should be positive")
 
     // Check Step2 validation
-    cy.visit('/step2')
+    cy.visit(url+'/step2')
 
     // Verify required validation
     cy.get('[data-testid=submit]').click()
